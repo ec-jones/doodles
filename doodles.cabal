@@ -1,0 +1,34 @@
+cabal-version:       2.2
+name:                doodles
+version:             0.1.0.0
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Eddie Jones
+maintainer:          eddie.c.jones@outlook.com
+build-type:          Simple
+
+
+common prelude
+  build-depends:       base, optics-core, containers, mtl
+
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-uni-patterns
+                       -Wincomplete-record-updates
+                       -Wredundant-constraints
+                       -Wmissing-export-lists
+                       -Wpartial-fields
+                       -fhide-source-paths
+                       -freverse-errors
+                       -fwrite-ide-info
+                       -hiedir=.hie
+
+  default-language:    Haskell2010
+
+library
+  import:              prelude
+
+  exposed-modules:     Flock
+
+  hs-source-dirs:      src
